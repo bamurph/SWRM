@@ -25,14 +25,34 @@
                                     <action selector="stopPlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sXV-cr-Ol3"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rn7-U7-Va0">
+                                <rect key="frame" x="257" y="895" width="255" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="pXc-gG-rJf"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Sine"/>
+                                    <segment title="Saw"/>
+                                    <segment title="Square"/>
+                                    <segment title="Triangle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didSelectWaveform:" destination="BYZ-38-t0r" eventType="valueChanged" id="nhx-8r-K8U"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="64b-EA-fV7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NMT-cr-fQw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rn7-U7-Va0" secondAttribute="bottom" constant="102" id="PYr-98-fOd"/>
+                            <constraint firstItem="rn7-U7-Va0" firstAttribute="centerX" secondItem="64b-EA-fV7" secondAttribute="centerX" id="Tv5-hm-INE"/>
                             <constraint firstItem="64b-EA-fV7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iKq-TU-R4H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="waveformSelector" destination="rn7-U7-Va0" id="2Aa-w4-9ay"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

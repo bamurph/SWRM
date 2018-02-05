@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     // Declare Vars
     var oscillator = AKOscillator(waveform: AKTable(.sawtooth))
 
+    @IBOutlet weak var waveformSelector: UISegmentedControl!
 
     // Functions
     @IBAction func startPlaying(_ sender: UIButton) {
@@ -24,6 +25,21 @@ class ViewController: UIViewController {
     @IBAction func stopPlaying(_ sender: UIButton) {
         oscillator.stop()
     }
+
+    @IBAction func didSelectWaveform(_ sender: UISegmentedControl) {
+        switch sender.titleForSegment(at: sender.selectedSegmentIndex) {
+
+        case .none:
+            return
+        case .some("Sine"):
+            oscillator = AKOscillator(waveform: AKTable(.sine))
+        case .some(let a):
+            switch a  {
+        }
+
+    }
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
