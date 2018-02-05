@@ -7,18 +7,30 @@
 //
 
 import UIKit
+import AudioKit
 
 class ViewController: UIViewController {
 
+    // Declare Vars
+    var oscillator = AKOscillator(waveform: AKTable(.sawtooth))
+
+
+    // Functions
     @IBAction func startPlaying(_ sender: UIButton) {
+        oscillator.frequency = random(in: 220 ... 880)
+        oscillator.start()
     }
 
     @IBAction func stopPlaying(_ sender: UIButton) {
+        oscillator.stop()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Set up Audiokit
+        AudioKit.output = oscillator
+        AudioKit.start()
     }
 
     override func didReceiveMemoryWarning() {
