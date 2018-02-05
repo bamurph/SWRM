@@ -16,6 +16,7 @@
 		B575F1731FEEE61100DCDD4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B575F1711FEEE61100DCDD4E /* LaunchScreen.storyboard */; };
 		B575F17E1FEEE61100DCDD4E /* SWRMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B575F17D1FEEE61100DCDD4E /* SWRMTests.swift */; };
 		B575F1891FEEE61100DCDD4E /* SWRMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B575F1881FEEE61100DCDD4E /* SWRMUITests.swift */; };
+		B5EF047D202899FF002ECF7E /* SWRMKnob.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5EF047C202899FF002ECF7E /* SWRMKnob.storyboard */; };
 		E4F2AA49258A5D1BBE18D995 /* Pods_SWRMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708A3B5F846D6016AAB56BD5 /* Pods_SWRMUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		B575F1841FEEE61100DCDD4E /* SWRMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWRMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B575F1881FEEE61100DCDD4E /* SWRMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWRMUITests.swift; sourceTree = "<group>"; };
 		B575F18A1FEEE61100DCDD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EF047C202899FF002ECF7E /* SWRMKnob.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SWRMKnob.storyboard; path = ../SWRMKnob.storyboard; sourceTree = "<group>"; };
 		C14E40BB856573ABD5155279 /* Pods-SWRMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWRMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWRMTests/Pods-SWRMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD47B0E2A7D4D4850FAD4F0E /* Pods-SWRM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWRM.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWRM/Pods-SWRM.release.xcconfig"; sourceTree = "<group>"; };
 		D6A8E8859BA78C6896D63D9E /* Pods_SWRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				B575F1681FEEE61100DCDD4E /* AppDelegate.swift */,
 				B575F16A1FEEE61100DCDD4E /* ViewController.swift */,
 				B575F16C1FEEE61100DCDD4E /* Main.storyboard */,
+				B5EF047C202899FF002ECF7E /* SWRMKnob.storyboard */,
 				B575F16F1FEEE61100DCDD4E /* Assets.xcassets */,
 				B575F1711FEEE61100DCDD4E /* LaunchScreen.storyboard */,
 				B575F1741FEEE61100DCDD4E /* Info.plist */,
@@ -283,6 +286,7 @@
 			files = (
 				B575F1731FEEE61100DCDD4E /* LaunchScreen.storyboard in Resources */,
 				B575F1701FEEE61100DCDD4E /* Assets.xcassets in Resources */,
+				B5EF047D202899FF002ECF7E /* SWRMKnob.storyboard in Resources */,
 				B575F16E1FEEE61100DCDD4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
