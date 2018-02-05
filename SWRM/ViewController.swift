@@ -12,7 +12,11 @@ import AudioKit
 class ViewController: UIViewController {
 
     // Declare Vars
-    var oscillator = AKOscillator(waveform: AKTable(.sawtooth))
+    var oscillator = AKOscillator(waveform: AKTable(.sawtooth)) {
+        didSet {
+            AudioKit.output = oscillator
+        }
+    }
 
     @IBOutlet weak var waveformSelector: UISegmentedControl!
 
@@ -27,16 +31,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didSelectWaveform(_ sender: UISegmentedControl) {
-        switch sender.titleForSegment(at: sender.selectedSegmentIndex) {
-
-        case .none:
-            return
+        let s = sender.titleForSegment(at: sender.selectedSegmentIndex)
+        switch s {
         case .some("Sine"):
             oscillator = AKOscillator(waveform: AKTable(.sine))
-        case .some(let a):
-            switch a  {
+        case .some("Square"):
+            oscillator = AKOscillator(waveform: AKTable(.square))
+        case .some("Saw"):
+            oscillator = AKOscillator(waveform: AKTable(.triangle))
+        case .none, .some(_):
+            return
         }
-
     }
 
 
@@ -46,6 +51,7 @@ class ViewController: UIViewController {
 
         // Set up Audiokit
         AudioKit.output = oscillator
+        AKSettings.playbackWhileMuted = true
         AudioKit.start()
     }
 
